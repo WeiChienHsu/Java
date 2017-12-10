@@ -18,6 +18,10 @@ public class Animal { //Basic class for Animal
 
     }
 
+    public void move(int speed){
+        System.out.println("Animal is moving at " + speed);
+    }
+
 
     public String getName() {
         return name;
