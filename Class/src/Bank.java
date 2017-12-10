@@ -21,6 +21,10 @@ public class Bank {
         this.phone = phone;
     }
 
+    public Bank(String custName, String email, String phone) {
+        this("99999", 100.55, custName, email, phone);
+    }
+
     public double getBalance(){
         return this.balance;
     }
