@@ -13,6 +13,12 @@ public class Animal { //Basic class for Animal
         this.weight = weight;
     }
 
+    public void eat() {
+        System.out.println("Eat!!!!!!!!!!!");
+
+    }
+
+
     public String getName() {
         return name;
     }
