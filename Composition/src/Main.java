@@ -1,11 +1,21 @@
 public class Main {
     public static void main(String[] args){
-        Dimensions dimensions = new Dimensions(20, 20, 5);
-        Case theCase = new Case("220B", "Dell", "240", dimensions);
-        Monitor theMonitor = new Monitor("27inch Beast", "Acer", 27, new Resolution(2539, 1440));
-        Motherboard motherboard = new Motherboard("Bj-200", "Asus", 4, 5, "2v.44");
+        AirConditioner airConditioner = new AirConditioner(true);
+        TV tv = new TV(true, new TvChannel());
+        Echo echo = new Echo(airConditioner, tv);
+        echo.checkStatus();
+        System.out.println("After checking init situation, Start actions!!!");
+        System.out.println("*********************");
+        echo.clickAirConditioner();
+        echo.clickTV();
+        echo.changeChanel(22);
+        echo.clickTV();
+        echo.changeChanel(22);
+        echo.clickAirConditioner();
 
-        PC thePC = new PC(theCase, theMonitor, motherboard);
-        thePC.getMonitor().drawPixelAt(155, 200, "Red");
+        System.out.println("*********************");
+        echo.checkStatus();
+
+
     }
 }
