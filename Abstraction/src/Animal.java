@@ -1,4 +1,14 @@
-package PACKAGE_NAME;
+public abstract class Animal {
+    private String name;
 
-public class Animal {
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public abstract void eat();
+    public abstract void breathe();
+
+    public String getName() {
+        return name;
+    }
 }
