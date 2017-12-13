@@ -1,23 +1,32 @@
-import java.util.ArrayList;
-
 public class Main {
-
     public static void main(String[] args) {
-        ArrayList<Integer> items = new ArrayList<>();
-        items.add(1);
-        items.add(2);
-        items.add(5);
-        items.add(4);
-        items.add(5);
-        items.add(6);
+        FootballPlayer joe = new FootballPlayer("Joe");
+        BaseballPlayer kevin = new BaseballPlayer("Kevin");
+        SoccerPlayer lin = new SoccerPlayer("Lin");
 
-        printDoubled(items);
-    }
+        Team<FootballPlayer> net = new Team<>("Net");
+        net.addPlayer(joe);
 
-    private static void printDoubled(ArrayList<Integer> n) {
-        for (int i : n) {
-            System.out.println(i * 2);
-        }
+        System.out.println(net.numPlayers());
+
+        Team<BaseballPlayer> hat = new Team<>("Hat");
+        hat.addPlayer(kevin);
+
+        Team<SoccerPlayer> heat = new Team<>("Heat");
+        heat.addPlayer(lin);
+
+        Team<FootballPlayer> hawthorn = new Team<>("Hawthorn");
+        Team<FootballPlayer> fremantle = new Team<>("Fremantle");
+
+        hawthorn.matchResult(fremantle, 1, 0);
+        hawthorn.matchResult(net, 3, 10);
+
+        net.matchResult(fremantle, 2, 5);
+        net.matchResult(hawthorn,4 , 2);
+
+
+
+
     }
 
 }
