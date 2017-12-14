@@ -11,7 +11,7 @@ public class Main {
             }
         }.start();
 
-        System.out.println("Hello again from the main Thread");
+        System.out.println(ANSI_BLUE + "Hello again from the main Thread");
 
 
     }
